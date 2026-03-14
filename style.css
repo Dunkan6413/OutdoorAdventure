@@ -211,10 +211,26 @@ nav a {
   background-attachment: fixed;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .explore_world h2 {
   margin-top: 0;
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.explore_world p {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+}
+
+.explore_world hr {
+  width: 4rem;
+  color: #fb2056;
+  justify-content: flex-start;
 }
 
 body {
