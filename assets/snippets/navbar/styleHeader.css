@@ -1,0 +1,30 @@
+/* Header */
+header {
+  background-image: none;
+  background-color: rgba(19, 19, 19, 0.65);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 30px;
+}
+
+#logoHeader {
+  position: relative;
+  left: 340px;
+  transform: scale(0.6);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  margin-right: 20rem;
+}
+nav a {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  color: #f5f5f5;
+  text-decoration: none;
+  padding: 20px;
+}
