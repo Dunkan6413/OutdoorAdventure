@@ -17,9 +17,9 @@ footer {
   background-color: #191919;
   background-image: none;
   color: #ffffff;
-  height: 12vh;
+  height: auto;
   font-family: "Montserrat";
-  padding-top: 2.5vh;
+  padding: 2.5vh 1rem;
 }
 
 /* Header */
@@ -30,6 +30,7 @@ header {
   justify-content: space-between;
   align-items: center;
   line-height: 30px;
+  position: relative;
 }
 
 #logoHeader {
@@ -53,25 +54,24 @@ nav a {
   padding: 20px;
 }
 
-/* Wonderful gift div */
-#hero-bg {
-  height: 25rem;
-  width: auto;
+/* Menu burger */
+#menuToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 16px;
+  margin-right: 1rem;
+  background: none;
+  border: none;
 }
-
-#quote {
-  height: 5rem;
-  width: auto;
-}
-
-#event {
-  height: 15rem;
-  width: auto;
-}
-
-#explore_bg {
-  height: 25rem;
-  width: auto;
+#menuToggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #f5f5f5;
+  border-radius: 2px;
+  transition: 0.3s;
 }
 
 .main_page {
@@ -92,7 +92,6 @@ nav a {
   margin: auto;
 }
 
-/* Empty button style */
 #nothingButton {
   color: white;
   background-color: #fb2056;
@@ -101,13 +100,11 @@ nav a {
   text-decoration: none;
   font-family: "Noto Sans";
   font-size: 0.875rem;
-  top: 0px;
-  right: 0px;
   padding: 20px;
   border-radius: 300px;
   border-width: 0;
+  cursor: pointer;
 }
-
 #nothingButton:hover {
   transition: 0.2s linear;
   background-color: #da1c4b;
@@ -128,6 +125,7 @@ nav a {
   border: 1px solid #fb2056;
 }
 
+/* Quote */
 .lorem_quote {
   background-image: none;
   background-color: #ececec;
@@ -143,19 +141,25 @@ nav a {
   padding-bottom: 50px;
 }
 
+#quote {
+  height: 5rem;
+  width: auto;
+}
+
 #quoteSendler {
   margin-left: 50px;
 }
 
+/* Events */
 .upcoming_events {
   background-image: none;
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
-  height: 50rem;
   padding-top: 7rem;
   padding-right: 20rem;
   padding-left: 20rem;
+  padding-bottom: 7rem;
 }
 
 .upcoming_events h2 {
@@ -174,18 +178,17 @@ nav a {
   flex-direction: row;
   justify-content: space-between;
 }
-
+.events div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .events p {
   text-align: center;
   text-wrap: wrap;
   margin-left: 40px;
   margin-right: 40px;
   width: 440px;
-}
-
-.events button {
-  display: block;
-  margin: auto;
 }
 
 #boldTitle {
@@ -198,24 +201,16 @@ nav a {
   font-family: "Noto Sans";
 }
 
-#event {
-  /* transform: scale(1.2); */
+.event-img {
   height: 19rem;
   width: auto;
   border-radius: 5px;
   box-shadow: 10px 10px #e4e4e4;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-/* .lorem_quote #quote {
-    width: 50px;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.lorem_quote div{
-    flex: 1;
-} */
-
+/* Explore the World div */
 .explore_world {
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -250,6 +245,7 @@ nav a {
   margin: 0;
 }
 
+/* Tours & Destination */
 .toursAndDestination {
   background-image: none;
   background-color: #f5f5f5;
@@ -293,12 +289,148 @@ nav a {
   border-radius: 5px;
 }
 
-@media (max-width: 460px) {
-  .tourImages {
-    height: 150vh;
+/* Media Queries*/
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  #logoHeader {
+    position: static;
+    transform: scale(0.75);
+    margin-left: 0.5rem;
+  }
+
+  #menuToggle {
+    display: flex;
+    font-size: 36px;
+    color: white;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    padding: 0.5rem 0;
+  }
+  nav.open {
+    display: flex;
+  }
+  nav a {
+    padding: 14px 24px;
+    width: 100%;
+    color: black;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  nav #nothingButton {
+    display: none;
+  }
+
+  .main_page {
+    padding: 6rem 1.5rem;
+  }
+
+  #explore {
+    font-size: 16px;
+  }
+
+  #gift {
+    font-size: 36px;
+  }
+
+  .lorem_quote {
+    flex-direction: column;
+    font-size: 1em;
+    padding: 30px 1.5rem;
+    gap: 10px;
+  }
+
+  #quote {
+    height: 3rem;
+  }
+
+  #quoteSendler {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .upcoming_events {
+    padding: 4rem 1.5rem;
+    height: auto;
+  }
+
+  .events {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .events p {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .event-img {
+    height: auto;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .explore_world {
+    height: auto;
+    min-height: 25em;
+    background-attachment: scroll;
+  }
+
+  .explore_world_intern {
+    margin-left: 0;
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .toursAndDestination {
     flex-direction: column;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .tourImages {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 1.5rem 1rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  #gift {
+    font-size: 28px;
+  }
+
+  .tourImages img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lorem_quote {
+    font-size: 0.9em;
   }
 }

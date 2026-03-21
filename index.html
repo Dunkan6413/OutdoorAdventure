@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/styleIndex.css">
+    <script src="./js/indexScript.js" defer></script>
     <title>Home - Outdoor Adventure</title>
 </head>
 <body>
@@ -13,12 +14,14 @@
             <img src="./assets/images/logo/white-logo.png" alt="OUTDOOR Adventure">
         </a>
 
-        <nav>
+        <button id="menuToggle">☰</button>
+
+        <nav id="mainNav">
             <a href="./index.html">Home</a>
             <a href="./about.html">About</a>
-            <a href="./services.html">Services</>
+            <a href="./services.html">Services</a>
             <a href="./projects.html">Projects</a>
-            <a href="./contact.html">Contact</a> 
+            <a href="./contact.html">Contact</a>
             <button type="button" id="nothingButton">TAKE ACTION</button>
         </nav>
     </header>
@@ -33,7 +36,7 @@
     </div>
 
     <div class="lorem_quote" id="LoremQ">
-        <img src="./assets/images/logo/quote-1.png" id="quote">
+        <img src="./assets/images/logo/quote-1.png" id="quote" alt="quote">
         <div id="quoteSendler">
             <p>"Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris."</p>
             <p>- Adam Sendler</p>
@@ -46,20 +49,19 @@
 
         <section class="events">
             <div>
-                <img src="./assets/images/home/hiking-v1.jpg" id="event">
+                <img src="./assets/images/home/hiking-v1.jpg" class="event-img">
                 <p id="boldTitle">Everest Camp Trek</p>
-                <p id="description">Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris inistra possedit. </p>
+                <p id="description">Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris inistra possedit.</p>
                 <button type="button" id="nothingButton">LEARN MORE</button>
             </div>
 
             <div>
-                <img src="./assets/images/home/walking-v1.jpg" id="event">
+                <img src="./assets/images/home/walking-v1.jpg" class="event-img">
                 <p id="boldTitle">Walking Holidays</p>
-                <p id="description">Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris inistra possedit. </p>
+                <p id="description">Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris inistra possedit.</p>
                 <button type="button" id="nothingButton">LEARN MORE</button>
             </div>
         </section>
-        
     </div>
 
     <div class="explore_world">
@@ -76,19 +78,18 @@
             <h2>Upcoming Tours & Destinations</h2>
             <hr>
             <p>Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris. Sinistra possedit litora ut nabataeaque. Setucant coepyterunt perveniunt animal! Concordi aurea nabataeaque seductaque constaque cepit sublime flexi nullus.</p>
-            <button type="button" id="nothingButton" href="#">LEARN MORE</button>
+            <button type="button" id="nothingButton">LEARN MORE</button>
         </div>
         <div class="tourImages">
-            <img src="./assets/images/home/outdoor-image-01.jpg">
-            <img src="./assets/images/home/image-1.jpg">
-            <img src="./assets/images/home/snow-1.jpg">
-            <img src="./assets/images/home/outdoor-image-04.jpg">
+            <img src="./assets/images/home/outdoor-image-01.jpg" alt="Tour 1">
+            <img src="./assets/images/home/image-1.jpg" alt="Tour 2">
+            <img src="./assets/images/home/snow-1.jpg" alt="Tour 3">
+            <img src="./assets/images/home/outdoor-image-04.jpg" alt="Tour 4">
         </div>
     </div>
 
     <footer>
         <p>123 Fifth Avenue, NY 10160, New York, USA | Phone: 800-123-456 | Email: contact@example.com</p>
-
         <p>Copyright © 2026 Outdoor Adventure</p>
     </footer>
 </body>
